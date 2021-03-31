@@ -38,7 +38,12 @@ basic.forever(function () {
         } else if (ball.get(LedSpriteProperty.Y) >= 4) {
             ball.set(LedSpriteProperty.Blink, 0)
             basic.pause(1000)
-            game.gameOver()
+            music.stopMelody(MelodyStopOptions.Background)
+            for (let index = 0; index < 3; index++) {
+                basic.showString("GAME OVER")
+                basic.showNumber(game.score())
+            }
+            control.reset()
         }
         if (ball.get(LedSpriteProperty.X) <= 0) {
             directionX = 1
