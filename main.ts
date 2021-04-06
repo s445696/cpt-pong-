@@ -39,8 +39,10 @@ basic.forever(function () {
             ball.set(LedSpriteProperty.Blink, 0)
             basic.pause(1000)
             music.stopMelody(MelodyStopOptions.Background)
+            basic.clearScreen()
             for (let index = 0; index < 3; index++) {
                 basic.showString("GAME OVER")
+                basic.showString("Your score was ")
                 basic.showNumber(game.score())
             }
             control.reset()
