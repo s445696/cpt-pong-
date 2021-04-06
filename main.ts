@@ -42,8 +42,9 @@ basic.forever(function () {
             basic.clearScreen()
             for (let index = 0; index < 3; index++) {
                 basic.showString("GAME OVER")
-                basic.showString("Your score was ")
+                basic.showString("SCORE ")
                 basic.showNumber(game.score())
+                basic.clearScreen()
             }
             control.reset()
         }
