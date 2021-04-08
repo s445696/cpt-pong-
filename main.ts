@@ -67,3 +67,11 @@ basic.forever(function () {
         music.stopMelody(MelodyStopOptions.Background)
     }
 })
+basic.forever(function () {
+    let score = ""
+    if (score == "10") {
+        basic.clearScreen()
+        basic.showString("You Win")
+        control.reset()
+    }
+})
